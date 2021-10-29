@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    <title>Tabela Personalizada</title>
+                
+    <link rel="stylesheet" href="home.css" type="text/css" media="all">
+    
+    
+</head>
+    
+<body onload="onLoadingSetFocus()">
+    
+    <div class="outer-wrap">
+
+        <header class="site-header">
+            
+            
+        </header><!-- .site-header -->
+
+        <div class="content-area">
+            <main class="main-content-area">
+                <div class="table-container">
+                    
+                    <h1 class="heading">Tabela Personalizada</h1>
+                    <h2 class = "Resultadoh2" id="resultadoP"></h2></h2>
+                    <input type="text" placeholder="Pergunta" name="inputa" id="inputa" onkeypress="setFocusResposta()">
+                    <input type="text" placeholder="Resposta" name="inputb" id="inputb" onkeypress="btnAddRow()"> 
+                    
+                    <table class="table" name="tabelaa" id="tabelaa">
+                        <thead>
+                            <tr>
+                                <th>Pergunta</th>
+                                <th>Resposta</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody name="tabelaabody" id="tabelaabody">
+                           
+                            
+                        </tbody>
+                    </table>
+                    <div class="btns">
+                        <button type="button" class="btnVerde" onclick="iniciarTest()">Iniciar Test ordenado</button>
+                        <button type="button" class="btnVerdeClaro" onclick="iniciarTestNoRandom()">Iniciar Test no Random</button>
+                        <button type="button" class="btnOrange" onclick="conferirErros()">Conferir erros</button>
+                        <button type="button" class="btnOrangeClaro" onclick="recomecarDoZero()">Recomençar do zero</button> 
+                        <button type="button" class="btnVerdeDark" onclick="inverterColunas()">Inverter Colunas</button> 
+                        <button type="button" class="btnOrangeDark" onclick="clearTudo()">Apagar Tudo</button>                         
+                    </div>
+                </div>    
+            </main>
+
+            <div class="sidebar-right">
+                <ul>
+                    <li><a href="index.html">Tabela Personalizada</a></li>
+                    <li><a href="#">Dicionário inglês</a></li>
+                    <li><a href="#">Verbos em inglês</a></li>
+    
+                    <li><a href="#">Verbos irregulares</a></li>
+                    <li><a href="#">Pronomes</a></li>
+                    <li><a href="#">Preposições</a></li>
+    
+                    <li><a href="#">Substantivos</a></li>
+                    <li><a href="#">Sentenças</a></li>
+                    <li><a href="#">Adjetivos</a></li>
+                    <li><a href="#">Adverbos</a></li>
+                    <li><a href="#">Verbos frasais</a></li>
+                    <li><a href="#">Inglês britanico</a></li>
+                    <li><a href="#">Falsos amigos</a></li>
+                    <li><a href="#">Homonimos</a></li>
+                    <li><a href="#">Passado</a></li>
+                    <li><a href="#">Presente perfeito</a></li>
+                    <li><a href="#">Passado perfeito</a></li>
+                    <li><a href="#">Futuro</a></li>
+                    <li><a href="#">Presente continuo</a></li>
+                    <li><a href="#">Passado continou</a></li>
+                    <li><a href="#">Futuro continuo</a></li>
+                    <li><a href="#">Forma afirmativa</a></li>
+                    <li><a href="#">Forma negativa</a></li>
+                    <li><a href="#">Forma interogativa</a></li>              
+    
+                    <li><a href="#">Código morse</a></li>
+                    
+                    <li><a href="#">História</a></li>
+                    <li><a href="#">Seu Dicionário Personalizado</a></li>
+    
+                </ul>
+            </div>
+        </div>
+        
+
+        <!-- THE FOOTER -->
+        <footer class="site-footer">
+            <h1>Footer</h1>
+        </footer>
+
+    </div><!-- .outer-wrap -->
+    
+    <script src="personalized.js"></script>
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <!-- Our Script File -->
+    <script type="text/javascript" src="js/main.js"></script>  
+
+</body>
+
+</html>
