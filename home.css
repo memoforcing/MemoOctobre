@@ -2,13 +2,14 @@
 Base styles
 --------------------------------------------------------------*/
 body,
-button,
+/*button,*/
 /*input,*/
 textarea {
 	color: black;
 	font-family: 'Asap', sans-serif;
 	font-size: 16px;
 	line-height: 0.8;
+    
 }
 
 body {
@@ -118,6 +119,20 @@ input[type=text] {
     margin : 0 auto;*/	
   }
 
+  .resultadosInfos{
+      display: flex;
+      justify-content: space-between;  
+  }
+
+  .btnEdit{
+      width: 30px;
+      height: 43px;
+      margin-left: 5px;
+      background-color: orangered;
+  }
+
+ 
+
 
 
 @media screen and (min-width: 1120px) {
@@ -209,8 +224,7 @@ input[type=text] {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-button {
-    
+button {    
     width: 40%;
     margin-top: 5px;
     height: 40px;
@@ -257,6 +271,17 @@ button {
     font-weight: bolder;
     border-radius: 1%;
 } 
+
+.textAndBtns{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.btnEdit{
+    width: 60px;
+    margin-top: 8px;    
+}
 
 @media (max-width: 768px){
 

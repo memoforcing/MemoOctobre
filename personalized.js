@@ -114,15 +114,16 @@ if(event.keyCode === 13){
 }    
 }
 
-
+var rodadas = 1
 function faseTestOrdenado(){
-console.log("getarray1.length = " + getarray1.length);
+document.getElementById("contagemRodadas").innerHTML = "rodada " + rodadas;
 if (faseTestb){
     console.log("fase test " + faseTestb);
     //document.getElementById('inputa').value=getarray1[x];
     if (document.getElementById('inputb').value ===  getarray2[x]){
         console.log("It looks ok... ");
-        document.getElementById("resultadoP").innerHTML = "Correct"
+        document.getElementById("resultadoP").innerHTML = "V";
+        document.getElementById("resultadoP").style.color = "green";
 
     }  else {
         console.log("wrong... ");
@@ -130,7 +131,8 @@ if (faseTestb){
         getarray22.push(getarray2[x]);
         console.log("getarray11 = " + getarray11);
         console.log("getarray22 = " + getarray22);
-        document.getElementById("resultadoP").innerHTML = "Wrong"
+        document.getElementById("resultadoP").innerHTML = "X"
+        document.getElementById("resultadoP").style.color = "red";
     }
     if (x === (getarray1.length - 1)){
         console.log("OK Fim");
@@ -144,7 +146,7 @@ if (faseTestb){
         document.getElementById('inputb').focus();  
         document.getElementById('inputa').value=getarray1[x]; 
     }            
-}    
+}        
 }
 
 function conferirErros(){
@@ -177,7 +179,9 @@ getarray11 = [];
 getarray22 = [];
 console.log("getarray11 = " + getarray11);
 contagemDeRodadas = contagemDeRodadas + 1;
-
+document.getElementById("contagemRodadas").innerHTML = "Fim rodada " + contagemDeRodadas;
+document.getElementById("resultadoP").style.color = "black";
+rodadas += 1
 }
 
 function recomecarDoZero(){
@@ -403,4 +407,23 @@ function clearTudo(){
         } else {
             document.getElementById("inputa").focus();
         }    
+}
+
+//---------------------------------------------------
+var deleteRow = false;
+function deleteTableRow()
+{
+    var index,
+        table = document.getElementById("tabelaa");
+    
+    for (var i = 1; i < table.rows.length; i++ )
+        { 
+            table.rows[i].onclick = function()
+            {
+                index = this.rowIndex;                        
+                table.deleteRow(index);                
+                i--;                
+            };    
+        } 
+    
 }

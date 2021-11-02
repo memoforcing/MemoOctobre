@@ -8,6 +8,7 @@
     <title>Tabela Personalizada</title>
                 
     <link rel="stylesheet" href="home.css" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     
     
 </head>
@@ -26,16 +27,23 @@
                 <div class="table-container">
                     
                     <h1 class="heading">Tabela Personalizada</h1>
-                    <h2 class = "Resultadoh2" id="resultadoP"></h2></h2>
-                    <input type="text" placeholder="Pergunta" name="inputa" id="inputa" onkeypress="setFocusResposta()">
-                    <input type="text" placeholder="Resposta" name="inputb" id="inputb" onkeypress="btnAddRow()"> 
+
+                    <div class="resultadosInfos">
+                        <h2 class = "Resultadoh2" id="resultadoP"></h2>
+                        <h2 class = "Resultadoh2" id="contagemRodadas"></h2>
+                    </div>    
+                    <div class="textAndBtns">
+                        <input type="text" placeholder="Pergunta" name="inputa" id="inputa" onkeypress="setFocusResposta()">
+                        <input type="text" placeholder="Resposta" name="inputb" id="inputb" onkeypress="btnAddRow()"> 
+                        <button type="button" class="btnEdit" onclick="deleteTableRow()"><i class="fas fa-user-edit"></i></i></button>
+                        <button type="button" class="btnEdit" onclick="deleteTableRow()"><i class="fas fa-trash-alt"></i></button>
+                    </div>
                     
                     <table class="table" name="tabelaa" id="tabelaa">
                         <thead>
                             <tr>
                                 <th>Pergunta</th>
-                                <th>Resposta</th>
-                                
+                                <th>Resposta</th>                                
                             </tr>
                         </thead>
                         <tbody name="tabelaabody" id="tabelaabody">
