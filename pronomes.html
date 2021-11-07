@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    <title>Tabela Personalizada</title>
+                
+    <link rel="stylesheet" href="home.css" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    
+    
+</head>
+    
+<body onload="onLoadingSetFocus()">
+    
+    <div class="outer-wrap">
+
+        <header class="site-header">            
+            <img src="imgs/memoWhiteB.png">      
+        </header><!-- .site-header -->
+
+        <div class="content-area">
+            <main class="main-content-area">
+                <div class="table-container">
+                    
+                    <h1 class="heading">Pronome Pessoal do Sujeito</h1>
+
+                    <div class="resultadosInfos">
+                        <h2 class = "Resultadoh2" id="resultadoP"></h2>
+                        <h2 class = "Resultadoh2" id="contagemRodadas"></h2>
+                    </div>    
+                    <div class="textAndBtns">
+                        <input type="text" placeholder="Pergunta" name="inputa" id="inputa" onkeypress="setFocusResposta()">
+                        <input type="text" placeholder="Resposta" name="inputb" id="inputb" onkeypress="btnAddRow()"> 
+                        <button type="button" class="btnEdit" onclick="merda()"><i class="fab fa-get-pocket"></i></i></i></button>
+                        <button type="button" class="btnEdit" onclick="editRow()"><i class="fas fa-user-edit"></i></i></button>
+                        <button type="button" class="btnEdit" onclick="insertRow()"><i class="fas fa-user-plus"></i></i></i></button>
+                        <button type="button" class="btnEdit" onclick="deleteTableRow()"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+                    
+                    <table class="table" name="tabelaa" id="tabelaa">
+                        <thead>
+                            <tr>
+                                <th>Português</th>
+                                <th>Inglês</th>                                
+                            </tr>
+                        </thead>
+                        <tbody name="tabelaabody" id="tabelaabody">
+                           <tr>
+                               <td>eu</td>
+                               <td>I</td> 
+                           </tr>    
+                           <tr>
+                                <td>você</td>
+                                <td>you</td> 
+                            </tr>                                       
+                        
+                            <tr>
+                                <td>ele</td>
+                                <td>he</td> 
+                            </tr>    
+                            <tr>
+                                <td>ela</td>
+                                <td>she</td> 
+                            </tr>     
+                            <tr>
+                                <td>isto</td>
+                                <td>it</td> 
+                            </tr>    
+                            <tr>
+                                 <td>nós</td>
+                                 <td>us</td> 
+                             </tr>                                       
+                         
+                             <tr>
+                                 <td>vocês</td>
+                                 <td>you</td> 
+                             </tr>    
+                             <tr>
+                                 <td>eles</td>
+                                 <td>they</td> 
+                             </tr>     
+                             <tr>
+                                <td>elas</td>
+                                <td>they</td> 
+                            </tr>     
+                        </tbody>          
+                    </table>
+                    <div class="btns">
+                        <button type="button" class="btnVerde" onclick="iniciarTest()">Iniciar Test ordenado</button>
+                        <button type="button" class="btnVerdeClaro" onclick="iniciarTestNoRandom()">Iniciar Test no Random</button>
+                        <button type="button" class="btnOrange" onclick="conferirErros()">Conferir erros</button>
+                        <button type="button" class="btnOrangeClaro" onclick="recomecarDoZero()">Recomençar do zero</button> 
+                        <button type="button" class="btnVerdeDark" onclick="inverterColunas()">Inverter Colunas</button> 
+                        <button type="button" class="btnOrangeDark" onclick="clearTudo()">Apagar Tudo</button>                         
+                    </div>
+                </div>    
+            </main>
+
+            <div class="sidebar-right">
+                <ul>
+                    <li><a href="home.html">Página Inicial</a></li>
+                    <li><a href="#">Pronomes Pessoais do Objeto</a></li>
+                    <li><a href="#">Pronomes Demonstrativos</a></li>
+                    <li><a href="#">Adjetivos Possessivos</a></li>
+                    <li><a href="#">Pronomes Possessivos</a></li>
+                    <li><a href="#">Pronomes Relativos</a></li>
+                    <li><a href="#">Pronomes Reflexivos</a></li>               
+    
+                </ul>
+            </div>
+        </div>
+        
+
+        <!-- THE FOOTER -->
+        <footer class="site-footer">
+            <h1>Footer</h1>
+        </footer>
+
+    </div><!-- .outer-wrap -->
+    
+    <script src="personalized.js"></script>
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <!-- Our Script File -->
+    <script type="text/javascript" src="js/main.js"></script>  
+
+</body>
+
+</html>
